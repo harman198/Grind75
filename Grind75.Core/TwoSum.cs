@@ -6,6 +6,14 @@ public class TwoSum
     {
         if (items == null || items.Length < 2) return null;
 
-        else return (1, 1);
-    }
+        for (int i = 0; i < items.Length; i++)
+        {
+            var subTarget = target - items[i];
+            var subTargetIndex = items.ToList().FindIndex(i+1, item => item == subTarget);
+
+            if (subTargetIndex == -1) continue;
+            else return (i, subTargetIndex);
+        }
+        return null;
+   }
 }
