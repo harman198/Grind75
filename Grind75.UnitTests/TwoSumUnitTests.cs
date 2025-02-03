@@ -21,6 +21,9 @@ namespace Grind75.UnitTests
             yield return new object[] { null, int.MaxValue, null };
             yield return new object[] { null, int.MinValue, null };
             yield return new object[] { (0, 1), 3, 1, 2 };
+            yield return new object[] { (1, 2), 6, 3, 2, 4 };
+            yield return new object[] { (0, 1), 9, 2, 7, 11, 15 };
+            yield return new object[] { (0, 1), 6, 3, 3 };
         }
     }
 }
